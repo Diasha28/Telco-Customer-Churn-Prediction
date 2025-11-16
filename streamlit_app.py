@@ -49,10 +49,7 @@ def churn_predict(input_data):
 
 def main():   
     st.markdown( "<h1 style='text-align: center; color:#4A90E2;'>📡 Telco Customer Churn Prediction</h1>", unsafe_allow_html=True)
-    image_sidebar = Image.open('sidebarimg.jpg')
     image_banner = Image.open('headerimg.png')
-    st.image(image_banner, use_container_width=True )
-    st.sidebar.image(image_sidebar, use_container_width=True)
     col1, col2 = st.columns(2)
     with col1:
         gender = st.selectbox("Gender", ("Male", "Female"))
