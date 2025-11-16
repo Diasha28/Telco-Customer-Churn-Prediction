@@ -75,7 +75,7 @@ def main():
             "Electronic check",
             "Mailed check"
         ])
-        MonthlyCharges = st.number_input("Monthly Charges:", min_value=0.0)
+        MonthlyCharges = st.number_input("Monthly Charges in £:", min_value=0.0)
         TotalCharges = st.number_input("Total Charges:", min_value=0.0)
         st.markdown("""
         <style>
