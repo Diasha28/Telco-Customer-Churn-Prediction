@@ -1,6 +1,6 @@
 import numpy as np
 import pickle
-import streamlit_app as st
+import streamlit as st
 import pandas as pd
 from PIL import Image
 st.set_page_config(
