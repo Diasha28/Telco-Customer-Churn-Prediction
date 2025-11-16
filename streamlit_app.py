@@ -3,6 +3,10 @@ import pickle
 import streamlit_app as st
 import pandas as pd
 from PIL import Image
+st.set_page_config(
+    page_title="Telco Customer Churn Predictor",
+    layout="wide"
+    )   
 with open("model_pkl", "rb") as f:
     churn_model = pickle.load(f)
 
@@ -43,11 +47,7 @@ def churn_predict(input_data):
     prediction = churn_model.predict(final_df)[0]
     return "Customer is likely to Churn" if prediction ==1 else "Customer is less likely to Churn"
 
-def main():
-    st.set_page_config(
-        page_title="Telco Customer Churn Predictor",
-        layout="wide"
-    )      
+def main():   
     st.markdown( "<h1 style='text-align: center; color:#4A90E2;'>📡 Telco Customer Churn Prediction</h1>", unsafe_allow_html=True)
     image_sidebar = Image.open('sidebarimg.jpg')
     image_banner = Image.open('headerimg.png')
