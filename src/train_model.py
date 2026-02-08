@@ -31,7 +31,7 @@ def train_model(path: str, threshold: float = 0.3):
     model.fit(X_train, y_train)
     training_time = time.time() - start_time
     logging.info(f"Training completed in {training_time:.2f} seconds")
-
+    
     logging.info("Evaluating model...")
     start_pred = time.time()
     prob = model.predict_proba(X_test)[:, 1]
