@@ -31,7 +31,7 @@ def train_model(path: str, threshold: float = 0.3):
     model.fit(X_train, y_train)
     training_time = time.time() - start_time
     logging.info(f"Training completed in {training_time:.2f} seconds")
-    
+
     logging.info("Evaluating model...")
     start_pred = time.time()
     prob = model.predict_proba(X_test)[:, 1]
@@ -42,6 +42,7 @@ def train_model(path: str, threshold: float = 0.3):
     logging.info("Saving trained model...")
     joblib.dump(model, "models/churn_model.pkl")
     logging.info("Model saved successfully.")
+
 
 if __name__ == "__main__":
     path = input("Enter path to dataset CSV file: ")
